@@ -1,0 +1,658 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2C269C2236A1B7C002C7BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269C1236A1B7C002C7BD5 /* AppDelegate.swift */; };
+		D2C269C4236A1B7C002C7BD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269C3236A1B7C002C7BD5 /* SceneDelegate.swift */; };
+		D2C269C6236A1B7C002C7BD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269C5236A1B7C002C7BD5 /* ContentView.swift */; };
+		D2C269C8236A1B7E002C7BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C269C7236A1B7E002C7BD5 /* Assets.xcassets */; };
+		D2C269CB236A1B7E002C7BD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C269CA236A1B7E002C7BD5 /* Preview Assets.xcassets */; };
+		D2C269CE236A1B7E002C7BD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C269CC236A1B7E002C7BD5 /* LaunchScreen.storyboard */; };
+		D2C269D3236A1B7E002C7BD5 /* meridian_watch_app WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D2C269D2236A1B7E002C7BD5 /* meridian_watch_app WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D2C269D9236A1B7E002C7BD5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C269D7236A1B7E002C7BD5 /* Interface.storyboard */; };
+		D2C269DB236A1B7F002C7BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C269DA236A1B7F002C7BD5 /* Assets.xcassets */; };
+		D2C269E2236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D2C269E1236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D2C269E7236A1B7F002C7BD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269E6236A1B7F002C7BD5 /* ContentView.swift */; };
+		D2C269E9236A1B7F002C7BD5 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269E8236A1B7F002C7BD5 /* HostingController.swift */; };
+		D2C269EB236A1B7F002C7BD5 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269EA236A1B7F002C7BD5 /* ExtensionDelegate.swift */; };
+		D2C269ED236A1B7F002C7BD5 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269EC236A1B7F002C7BD5 /* NotificationController.swift */; };
+		D2C269EF236A1B7F002C7BD5 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269EE236A1B7F002C7BD5 /* NotificationView.swift */; };
+		D2C269F1236A1B80002C7BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C269F0236A1B80002C7BD5 /* Assets.xcassets */; };
+		D2C269F4236A1B80002C7BD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C269F3236A1B80002C7BD5 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2C269D4236A1B7E002C7BD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2C269B6236A1B7C002C7BD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2C269D1236A1B7E002C7BD5;
+			remoteInfo = "meridian_watch_app WatchKit App";
+		};
+		D2C269E3236A1B7F002C7BD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2C269B6236A1B7C002C7BD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2C269E0236A1B7F002C7BD5;
+			remoteInfo = "meridian_watch_app WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D2C269FC236A1B80002C7BD5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D2C269E2236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C26A00236A1B80002C7BD5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D2C269D3236A1B7E002C7BD5 /* meridian_watch_app WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D2C269BE236A1B7C002C7BD5 /* meridian_watch_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meridian_watch_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2C269C1236A1B7C002C7BD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D2C269C3236A1B7C002C7BD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D2C269C5236A1B7C002C7BD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D2C269C7236A1B7E002C7BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2C269CA236A1B7E002C7BD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D2C269CD236A1B7E002C7BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D2C269CF236A1B7E002C7BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2C269D2236A1B7E002C7BD5 /* meridian_watch_app WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "meridian_watch_app WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2C269D8236A1B7E002C7BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D2C269DA236A1B7F002C7BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2C269DC236A1B7F002C7BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2C269E1236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "meridian_watch_app WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2C269E6236A1B7F002C7BD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D2C269E8236A1B7F002C7BD5 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		D2C269EA236A1B7F002C7BD5 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D2C269EC236A1B7F002C7BD5 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D2C269EE236A1B7F002C7BD5 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		D2C269F0236A1B80002C7BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2C269F3236A1B80002C7BD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D2C269F5236A1B80002C7BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2C269F6236A1B80002C7BD5 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2C269BB236A1B7C002C7BD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C269DE236A1B7F002C7BD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2C269B5236A1B7C002C7BD5 = {
+			isa = PBXGroup;
+			children = (
+				D2C269C0236A1B7C002C7BD5 /* meridian_watch_app */,
+				D2C269D6236A1B7E002C7BD5 /* meridian_watch_app WatchKit App */,
+				D2C269E5236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension */,
+				D2C269BF236A1B7C002C7BD5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2C269BF236A1B7C002C7BD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2C269BE236A1B7C002C7BD5 /* meridian_watch_app.app */,
+				D2C269D2236A1B7E002C7BD5 /* meridian_watch_app WatchKit App.app */,
+				D2C269E1236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2C269C0236A1B7C002C7BD5 /* meridian_watch_app */ = {
+			isa = PBXGroup;
+			children = (
+				D2C269C1236A1B7C002C7BD5 /* AppDelegate.swift */,
+				D2C269C3236A1B7C002C7BD5 /* SceneDelegate.swift */,
+				D2C269C5236A1B7C002C7BD5 /* ContentView.swift */,
+				D2C269C7236A1B7E002C7BD5 /* Assets.xcassets */,
+				D2C269CC236A1B7E002C7BD5 /* LaunchScreen.storyboard */,
+				D2C269CF236A1B7E002C7BD5 /* Info.plist */,
+				D2C269C9236A1B7E002C7BD5 /* Preview Content */,
+			);
+			path = meridian_watch_app;
+			sourceTree = "<group>";
+		};
+		D2C269C9236A1B7E002C7BD5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D2C269CA236A1B7E002C7BD5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D2C269D6236A1B7E002C7BD5 /* meridian_watch_app WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D2C269D7236A1B7E002C7BD5 /* Interface.storyboard */,
+				D2C269DA236A1B7F002C7BD5 /* Assets.xcassets */,
+				D2C269DC236A1B7F002C7BD5 /* Info.plist */,
+			);
+			path = "meridian_watch_app WatchKit App";
+			sourceTree = "<group>";
+		};
+		D2C269E5236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D2C269E6236A1B7F002C7BD5 /* ContentView.swift */,
+				D2C269E8236A1B7F002C7BD5 /* HostingController.swift */,
+				D2C269EA236A1B7F002C7BD5 /* ExtensionDelegate.swift */,
+				D2C269EC236A1B7F002C7BD5 /* NotificationController.swift */,
+				D2C269EE236A1B7F002C7BD5 /* NotificationView.swift */,
+				D2C269F0236A1B80002C7BD5 /* Assets.xcassets */,
+				D2C269F5236A1B80002C7BD5 /* Info.plist */,
+				D2C269F6236A1B80002C7BD5 /* PushNotificationPayload.apns */,
+				D2C269F2236A1B80002C7BD5 /* Preview Content */,
+			);
+			path = "meridian_watch_app WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D2C269F2236A1B80002C7BD5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D2C269F3236A1B80002C7BD5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2C269BD236A1B7C002C7BD5 /* meridian_watch_app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2C26A01236A1B80002C7BD5 /* Build configuration list for PBXNativeTarget "meridian_watch_app" */;
+			buildPhases = (
+				D2C269BA236A1B7C002C7BD5 /* Sources */,
+				D2C269BB236A1B7C002C7BD5 /* Frameworks */,
+				D2C269BC236A1B7C002C7BD5 /* Resources */,
+				D2C26A00236A1B80002C7BD5 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2C269D5236A1B7E002C7BD5 /* PBXTargetDependency */,
+			);
+			name = meridian_watch_app;
+			productName = meridian_watch_app;
+			productReference = D2C269BE236A1B7C002C7BD5 /* meridian_watch_app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2C269D1236A1B7E002C7BD5 /* meridian_watch_app WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2C269FD236A1B80002C7BD5 /* Build configuration list for PBXNativeTarget "meridian_watch_app WatchKit App" */;
+			buildPhases = (
+				D2C269D0236A1B7E002C7BD5 /* Resources */,
+				D2C269FC236A1B80002C7BD5 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2C269E4236A1B7F002C7BD5 /* PBXTargetDependency */,
+			);
+			name = "meridian_watch_app WatchKit App";
+			productName = "meridian_watch_app WatchKit App";
+			productReference = D2C269D2236A1B7E002C7BD5 /* meridian_watch_app WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D2C269E0236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2C269F9236A1B80002C7BD5 /* Build configuration list for PBXNativeTarget "meridian_watch_app WatchKit Extension" */;
+			buildPhases = (
+				D2C269DD236A1B7F002C7BD5 /* Sources */,
+				D2C269DE236A1B7F002C7BD5 /* Frameworks */,
+				D2C269DF236A1B7F002C7BD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "meridian_watch_app WatchKit Extension";
+			productName = "meridian_watch_app WatchKit Extension";
+			productReference = D2C269E1236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2C269B6236A1B7C002C7BD5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = sabotoothtigers;
+				TargetAttributes = {
+					D2C269BD236A1B7C002C7BD5 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					D2C269D1236A1B7E002C7BD5 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					D2C269E0236A1B7F002C7BD5 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = D2C269B9236A1B7C002C7BD5 /* Build configuration list for PBXProject "meridian_watch_app" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2C269B5236A1B7C002C7BD5;
+			productRefGroup = D2C269BF236A1B7C002C7BD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2C269BD236A1B7C002C7BD5 /* meridian_watch_app */,
+				D2C269D1236A1B7E002C7BD5 /* meridian_watch_app WatchKit App */,
+				D2C269E0236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2C269BC236A1B7C002C7BD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2C269CE236A1B7E002C7BD5 /* LaunchScreen.storyboard in Resources */,
+				D2C269CB236A1B7E002C7BD5 /* Preview Assets.xcassets in Resources */,
+				D2C269C8236A1B7E002C7BD5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C269D0236A1B7E002C7BD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2C269DB236A1B7F002C7BD5 /* Assets.xcassets in Resources */,
+				D2C269D9236A1B7E002C7BD5 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C269DF236A1B7F002C7BD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2C269F4236A1B80002C7BD5 /* Preview Assets.xcassets in Resources */,
+				D2C269F1236A1B80002C7BD5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2C269BA236A1B7C002C7BD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2C269C2236A1B7C002C7BD5 /* AppDelegate.swift in Sources */,
+				D2C269C4236A1B7C002C7BD5 /* SceneDelegate.swift in Sources */,
+				D2C269C6236A1B7C002C7BD5 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C269DD236A1B7F002C7BD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2C269E9236A1B7F002C7BD5 /* HostingController.swift in Sources */,
+				D2C269E7236A1B7F002C7BD5 /* ContentView.swift in Sources */,
+				D2C269ED236A1B7F002C7BD5 /* NotificationController.swift in Sources */,
+				D2C269EB236A1B7F002C7BD5 /* ExtensionDelegate.swift in Sources */,
+				D2C269EF236A1B7F002C7BD5 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2C269D5236A1B7E002C7BD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2C269D1236A1B7E002C7BD5 /* meridian_watch_app WatchKit App */;
+			targetProxy = D2C269D4236A1B7E002C7BD5 /* PBXContainerItemProxy */;
+		};
+		D2C269E4236A1B7F002C7BD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2C269E0236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension */;
+			targetProxy = D2C269E3236A1B7F002C7BD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D2C269CC236A1B7E002C7BD5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2C269CD236A1B7E002C7BD5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D2C269D7236A1B7E002C7BD5 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2C269D8236A1B7E002C7BD5 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2C269F7236A1B80002C7BD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D2C269F8236A1B80002C7BD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2C269FA236A1B80002C7BD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"meridian_watch_app WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 6DM3LM6ZH6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "meridian_watch_app WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sabotoothtigers.meridian-watch-app.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		D2C269FB236A1B80002C7BD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"meridian_watch_app WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 6DM3LM6ZH6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "meridian_watch_app WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sabotoothtigers.meridian-watch-app.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		D2C269FE236A1B80002C7BD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6DM3LM6ZH6;
+				IBSC_MODULE = meridian_watch_app_WatchKit_Extension;
+				INFOPLIST_FILE = "meridian_watch_app WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "sabotoothtigers.meridian-watch-app.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		D2C269FF236A1B80002C7BD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6DM3LM6ZH6;
+				IBSC_MODULE = meridian_watch_app_WatchKit_Extension;
+				INFOPLIST_FILE = "meridian_watch_app WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "sabotoothtigers.meridian-watch-app.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		D2C26A02236A1B80002C7BD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"meridian_watch_app/Preview Content\"";
+				DEVELOPMENT_TEAM = 6DM3LM6ZH6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = meridian_watch_app/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sabotoothtigers.meridian-watch-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2C26A03236A1B80002C7BD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"meridian_watch_app/Preview Content\"";
+				DEVELOPMENT_TEAM = 6DM3LM6ZH6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = meridian_watch_app/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sabotoothtigers.meridian-watch-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2C269B9236A1B7C002C7BD5 /* Build configuration list for PBXProject "meridian_watch_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2C269F7236A1B80002C7BD5 /* Debug */,
+				D2C269F8236A1B80002C7BD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2C269F9236A1B80002C7BD5 /* Build configuration list for PBXNativeTarget "meridian_watch_app WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2C269FA236A1B80002C7BD5 /* Debug */,
+				D2C269FB236A1B80002C7BD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2C269FD236A1B80002C7BD5 /* Build configuration list for PBXNativeTarget "meridian_watch_app WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2C269FE236A1B80002C7BD5 /* Debug */,
+				D2C269FF236A1B80002C7BD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2C26A01236A1B80002C7BD5 /* Build configuration list for PBXNativeTarget "meridian_watch_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2C26A02236A1B80002C7BD5 /* Debug */,
+				D2C26A03236A1B80002C7BD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2C269B6236A1B7C002C7BD5 /* Project object */;
+}
