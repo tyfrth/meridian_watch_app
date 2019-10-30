@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1461F82354FE50B65EF8DB17 /* Pods_meridian_watch_app_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F77E3791528E591CAD2EC593 /* Pods_meridian_watch_app_WatchKit_App.framework */; };
+		96695105119AEB8A682A62EE /* Pods_meridian_watch_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673D444660C779B78CFEE6AE /* Pods_meridian_watch_app.framework */; };
+		BCAC2050CA61DADD59DA040B /* Pods_meridian_watch_app_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1E55717DCD42A483D5054A /* Pods_meridian_watch_app_WatchKit_Extension.framework */; };
 		D2C269C2236A1B7C002C7BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269C1236A1B7C002C7BD5 /* AppDelegate.swift */; };
 		D2C269C4236A1B7C002C7BD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269C3236A1B7C002C7BD5 /* SceneDelegate.swift */; };
 		D2C269C6236A1B7C002C7BD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269C5236A1B7C002C7BD5 /* ContentView.swift */; };
@@ -69,6 +72,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		063FBC05B8ACE897402E38C3 /* Pods-meridian_watch_app WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meridian_watch_app WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-meridian_watch_app WatchKit App/Pods-meridian_watch_app WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		2441B0A0870EA88C5128FF4F /* Pods-meridian_watch_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meridian_watch_app.release.xcconfig"; path = "Target Support Files/Pods-meridian_watch_app/Pods-meridian_watch_app.release.xcconfig"; sourceTree = "<group>"; };
+		2B1E55717DCD42A483D5054A /* Pods_meridian_watch_app_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meridian_watch_app_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		673D444660C779B78CFEE6AE /* Pods_meridian_watch_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meridian_watch_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B7EA1A53090ACAC64F5B194 /* Pods-meridian_watch_app WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meridian_watch_app WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-meridian_watch_app WatchKit Extension/Pods-meridian_watch_app WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		7A8877BE1477E51F7E5F51A6 /* Pods-meridian_watch_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meridian_watch_app.debug.xcconfig"; path = "Target Support Files/Pods-meridian_watch_app/Pods-meridian_watch_app.debug.xcconfig"; sourceTree = "<group>"; };
+		7FDD9100C3A1D028FFA91EB1 /* Pods-meridian_watch_app WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meridian_watch_app WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-meridian_watch_app WatchKit App/Pods-meridian_watch_app WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		D2C269BE236A1B7C002C7BD5 /* meridian_watch_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meridian_watch_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C269C1236A1B7C002C7BD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2C269C3236A1B7C002C7BD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,13 +101,24 @@
 		D2C269F3236A1B80002C7BD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2C269F5236A1B80002C7BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2C269F6236A1B80002C7BD5 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D46A9BF848B4CF00939B2AF4 /* Pods-meridian_watch_app WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meridian_watch_app WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-meridian_watch_app WatchKit Extension/Pods-meridian_watch_app WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		F77E3791528E591CAD2EC593 /* Pods_meridian_watch_app_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meridian_watch_app_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		64B97B816762A4F68C7CBE72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1461F82354FE50B65EF8DB17 /* Pods_meridian_watch_app_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2C269BB236A1B7C002C7BD5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96695105119AEB8A682A62EE /* Pods_meridian_watch_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,12 +126,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCAC2050CA61DADD59DA040B /* Pods_meridian_watch_app_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D3F8763FA1C5F4D6C9A3D85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A8877BE1477E51F7E5F51A6 /* Pods-meridian_watch_app.debug.xcconfig */,
+				2441B0A0870EA88C5128FF4F /* Pods-meridian_watch_app.release.xcconfig */,
+				7FDD9100C3A1D028FFA91EB1 /* Pods-meridian_watch_app WatchKit App.debug.xcconfig */,
+				063FBC05B8ACE897402E38C3 /* Pods-meridian_watch_app WatchKit App.release.xcconfig */,
+				D46A9BF848B4CF00939B2AF4 /* Pods-meridian_watch_app WatchKit Extension.debug.xcconfig */,
+				6B7EA1A53090ACAC64F5B194 /* Pods-meridian_watch_app WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3F84F0272A833994C4914DDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				673D444660C779B78CFEE6AE /* Pods_meridian_watch_app.framework */,
+				F77E3791528E591CAD2EC593 /* Pods_meridian_watch_app_WatchKit_App.framework */,
+				2B1E55717DCD42A483D5054A /* Pods_meridian_watch_app_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D2C269B5236A1B7C002C7BD5 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +164,8 @@
 				D2C269D6236A1B7E002C7BD5 /* meridian_watch_app WatchKit App */,
 				D2C269E5236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension */,
 				D2C269BF236A1B7C002C7BD5 /* Products */,
+				0D3F8763FA1C5F4D6C9A3D85 /* Pods */,
+				3F84F0272A833994C4914DDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,10 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2C26A01236A1B80002C7BD5 /* Build configuration list for PBXNativeTarget "meridian_watch_app" */;
 			buildPhases = (
+				B8879328A21D22C3295035D7 /* [CP] Check Pods Manifest.lock */,
 				D2C269BA236A1B7C002C7BD5 /* Sources */,
 				D2C269BB236A1B7C002C7BD5 /* Frameworks */,
 				D2C269BC236A1B7C002C7BD5 /* Resources */,
 				D2C26A00236A1B80002C7BD5 /* Embed Watch Content */,
+				51C9E08E8E1B2BFE45530374 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,8 +263,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2C269FD236A1B80002C7BD5 /* Build configuration list for PBXNativeTarget "meridian_watch_app WatchKit App" */;
 			buildPhases = (
+				2662A652E6D161F755E7A466 /* [CP] Check Pods Manifest.lock */,
 				D2C269D0236A1B7E002C7BD5 /* Resources */,
 				D2C269FC236A1B80002C7BD5 /* Embed App Extensions */,
+				64B97B816762A4F68C7CBE72 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +282,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2C269F9236A1B80002C7BD5 /* Build configuration list for PBXNativeTarget "meridian_watch_app WatchKit Extension" */;
 			buildPhases = (
+				14B69E6AE3D171EE8F017749 /* [CP] Check Pods Manifest.lock */,
 				D2C269DD236A1B7F002C7BD5 /* Sources */,
 				D2C269DE236A1B7F002C7BD5 /* Frameworks */,
 				D2C269DF236A1B7F002C7BD5 /* Resources */,
@@ -314,6 +367,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14B69E6AE3D171EE8F017749 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-meridian_watch_app WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2662A652E6D161F755E7A466 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-meridian_watch_app WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51C9E08E8E1B2BFE45530374 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meridian_watch_app/Pods-meridian_watch_app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meridian_watch_app/Pods-meridian_watch_app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-meridian_watch_app/Pods-meridian_watch_app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8879328A21D22C3295035D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-meridian_watch_app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D2C269BA236A1B7C002C7BD5 /* Sources */ = {
@@ -489,6 +628,7 @@
 		};
 		D2C269FA236A1B80002C7BD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D46A9BF848B4CF00939B2AF4 /* Pods-meridian_watch_app WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -513,6 +653,7 @@
 		};
 		D2C269FB236A1B80002C7BD5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B7EA1A53090ACAC64F5B194 /* Pods-meridian_watch_app WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -537,6 +678,7 @@
 		};
 		D2C269FE236A1B80002C7BD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FDD9100C3A1D028FFA91EB1 /* Pods-meridian_watch_app WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -556,6 +698,7 @@
 		};
 		D2C269FF236A1B80002C7BD5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 063FBC05B8ACE897402E38C3 /* Pods-meridian_watch_app WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -575,6 +718,7 @@
 		};
 		D2C26A02236A1B80002C7BD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A8877BE1477E51F7E5F51A6 /* Pods-meridian_watch_app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -595,6 +739,7 @@
 		};
 		D2C26A03236A1B80002C7BD5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2441B0A0870EA88C5128FF4F /* Pods-meridian_watch_app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
