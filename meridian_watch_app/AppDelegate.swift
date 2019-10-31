@@ -11,10 +11,21 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let config = MRConfig()
+        
+        // If samples are to be run via US servers, use these values
+       config.applicationToken = "090c29d8b4cc628e4bd327abf37f62e4e3477bae"
+       config.domainConfig.domainRegion = MRDomainRegion.default
+
+       // If samples are to be run via EU servers, use these values
+       // config.applicationToken = "50b4558f8fbfd96e26e122785e61b1589e1a13a5"
+       // config.domainConfig.domainRegion = MRDomainRegion.EU;
+
+       // must be called once, in application:didFinishLaunching
+       Meridian.configure(config)
+        
         return true
     }
 
