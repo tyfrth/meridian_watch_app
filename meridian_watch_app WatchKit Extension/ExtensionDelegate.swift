@@ -8,6 +8,8 @@
 
 import WatchKit
 
+let userStatus = UserStatus()
+
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
