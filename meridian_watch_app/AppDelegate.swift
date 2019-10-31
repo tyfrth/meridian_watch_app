@@ -11,6 +11,8 @@ import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -26,6 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
        // must be called once, in application:didFinishLaunching
        Meridian.configure(config)
+        
+        //check to see if session compatible
+        if !SessionHandler.shared.isSupported() {
+            print("WCSession not supported, dawg")
+        }
         
         return true
     }

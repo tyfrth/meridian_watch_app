@@ -33,6 +33,7 @@
 		D2C269EF236A1B7F002C7BD5 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269EE236A1B7F002C7BD5 /* NotificationView.swift */; };
 		D2C269F1236A1B80002C7BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C269F0236A1B80002C7BD5 /* Assets.xcassets */; };
 		D2C269F4236A1B80002C7BD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C269F3236A1B80002C7BD5 /* Preview Assets.xcassets */; };
+		D2C26A09236B6E2D002C7BD5 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C26A08236B6E2D002C7BD5 /* SessionHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		D2C269F3236A1B80002C7BD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2C269F5236A1B80002C7BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2C269F6236A1B80002C7BD5 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D2C26A08236B6E2D002C7BD5 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
 		D46A9BF848B4CF00939B2AF4 /* Pods-meridian_watch_app WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meridian_watch_app WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-meridian_watch_app WatchKit Extension/Pods-meridian_watch_app WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		F77E3791528E591CAD2EC593 /* Pods_meridian_watch_app_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meridian_watch_app_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -227,6 +229,7 @@
 				D2C269C1236A1B7C002C7BD5 /* AppDelegate.swift */,
 				D2C269C3236A1B7C002C7BD5 /* SceneDelegate.swift */,
 				D2C269C5236A1B7C002C7BD5 /* ContentView.swift */,
+				D2C26A08236B6E2D002C7BD5 /* SessionHandler.swift */,
 				D2C269C7236A1B7E002C7BD5 /* Assets.xcassets */,
 				D2C269CC236A1B7E002C7BD5 /* LaunchScreen.storyboard */,
 				D2C269CF236A1B7E002C7BD5 /* Info.plist */,
@@ -508,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2C269C2236A1B7C002C7BD5 /* AppDelegate.swift in Sources */,
+				D2C26A09236B6E2D002C7BD5 /* SessionHandler.swift in Sources */,
 				D2C269C4236A1B7C002C7BD5 /* SceneDelegate.swift in Sources */,
 				2145E17E236B6A8300B4625D /* ComplicationController.swift in Sources */,
 				BA951FB9236B514800D543D3 /* HACKHost.swift in Sources */,
