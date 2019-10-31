@@ -13,8 +13,10 @@
 		2145E178236B5C5200B4625D /* Pods_meridian_watch_app.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 673D444660C779B78CFEE6AE /* Pods_meridian_watch_app.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2145E17A236B64AD00B4625D /* Pods_meridian_watch_app_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1E55717DCD42A483D5054A /* Pods_meridian_watch_app_WatchKit_Extension.framework */; };
 		2145E17B236B64AD00B4625D /* Pods_meridian_watch_app_WatchKit_Extension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1E55717DCD42A483D5054A /* Pods_meridian_watch_app_WatchKit_Extension.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2145E17E236B6A8300B4625D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E17D236B6A8200B4625D /* ComplicationController.swift */; };
 		2145E17F236B6A8300B4625D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E17D236B6A8200B4625D /* ComplicationController.swift */; };
+		2145E181236B73CF00B4625D /* meridian_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2145E180236B73CF00B4625D /* meridian_image.png */; };
+		2145E204236B8F8400B4625D /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E1FC236B8F8300B4625D /* UserStatus.swift */; };
+		2145E205236B8F8400B4625D /* DatedRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E1FD236B8F8300B4625D /* DatedRecord.swift */; };
 		BA951FB9236B514800D543D3 /* HACKHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA951FB8236B514800D543D3 /* HACKHost.swift */; };
 		D2C269C2236A1B7C002C7BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269C1236A1B7C002C7BD5 /* AppDelegate.swift */; };
 		D2C269C4236A1B7C002C7BD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269C3236A1B7C002C7BD5 /* SceneDelegate.swift */; };
@@ -113,6 +115,9 @@
 /* Begin PBXFileReference section */
 		063FBC05B8ACE897402E38C3 /* Pods-meridian_watch_app WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meridian_watch_app WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-meridian_watch_app WatchKit App/Pods-meridian_watch_app WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		2145E17D236B6A8200B4625D /* ComplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		2145E180236B73CF00B4625D /* meridian_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meridian_image.png; sourceTree = "<group>"; };
+		2145E1FC236B8F8300B4625D /* UserStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
+		2145E1FD236B8F8300B4625D /* DatedRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatedRecord.swift; sourceTree = "<group>"; };
 		2441B0A0870EA88C5128FF4F /* Pods-meridian_watch_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meridian_watch_app.release.xcconfig"; path = "Target Support Files/Pods-meridian_watch_app/Pods-meridian_watch_app.release.xcconfig"; sourceTree = "<group>"; };
 		2B1E55717DCD42A483D5054A /* Pods_meridian_watch_app_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meridian_watch_app_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		673D444660C779B78CFEE6AE /* Pods_meridian_watch_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meridian_watch_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +193,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2145E1FB236B8F8300B4625D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2145E1FC236B8F8300B4625D /* UserStatus.swift */,
+				2145E1FD236B8F8300B4625D /* DatedRecord.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3F84F0272A833994C4914DDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +271,8 @@
 		D2C269E5236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2145E1FB236B8F8300B4625D /* Model */,
+				2145E180236B73CF00B4625D /* meridian_image.png */,
 				2145E17D236B6A8200B4625D /* ComplicationController.swift */,
 				D2C269E6236A1B7F002C7BD5 /* ContentView.swift */,
 				D2C269E8236A1B7F002C7BD5 /* HostingController.swift */,
@@ -409,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2145E181236B73CF00B4625D /* meridian_image.png in Resources */,
 				D2C269F4236A1B80002C7BD5 /* Preview Assets.xcassets in Resources */,
 				D2C269F1236A1B80002C7BD5 /* Assets.xcassets in Resources */,
 			);
@@ -509,7 +526,6 @@
 			files = (
 				D2C269C2236A1B7C002C7BD5 /* AppDelegate.swift in Sources */,
 				D2C269C4236A1B7C002C7BD5 /* SceneDelegate.swift in Sources */,
-				2145E17E236B6A8300B4625D /* ComplicationController.swift in Sources */,
 				BA951FB9236B514800D543D3 /* HACKHost.swift in Sources */,
 				D2C269C6236A1B7C002C7BD5 /* ContentView.swift in Sources */,
 			);
@@ -522,9 +538,11 @@
 				D2C269E9236A1B7F002C7BD5 /* HostingController.swift in Sources */,
 				D2C269E7236A1B7F002C7BD5 /* ContentView.swift in Sources */,
 				D2C269ED236A1B7F002C7BD5 /* NotificationController.swift in Sources */,
+				2145E204236B8F8400B4625D /* UserStatus.swift in Sources */,
 				D2C269EB236A1B7F002C7BD5 /* ExtensionDelegate.swift in Sources */,
 				2145E17F236B6A8300B4625D /* ComplicationController.swift in Sources */,
 				D2C269EF236A1B7F002C7BD5 /* NotificationView.swift in Sources */,
+				2145E205236B8F8400B4625D /* DatedRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,7 +713,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "sabotoothtigers.meridian-watch-app.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
@@ -720,7 +738,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "sabotoothtigers.meridian-watch-app.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
@@ -745,7 +763,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "sabotoothtigers.meridian-watch-app.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -771,7 +789,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "sabotoothtigers.meridian-watch-app.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
