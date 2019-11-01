@@ -183,7 +183,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             let template = CLKComplicationTemplateGraphicRectangularTextGauge()
 //            template.headerImageProvider = rightArrowProvier
             template.headerTextProvider = appNameTextProvider
-            template.body1TextProvider = CLKSimpleTextProvider(text: "➡ 300ft")
+            template.body1TextProvider = CLKSimpleTextProvider(text: "➡ 113ft")
                 //CLKRelativeDateTextProvider(date: userStatus.end, style: .naturalFull, units: [.minute, .second])
             template.gaugeProvider = gaugeProvider
             template.tintColor = UIColor.blue

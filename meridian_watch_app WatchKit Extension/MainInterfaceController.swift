@@ -80,8 +80,11 @@ class MainInterfaceController: WKInterfaceController, SessionCommands {
         } else if command == .transferUserInfo {
             let transferCount = WCSession.default.outstandingUserInfoTransfers.count
             if transferCount > 0 {
+                print("WE HAVE A TRANSFER")
                 let commandStatus = CommandStatus(command: .transferUserInfo, phrase: .finished)
                 logOutstandingTransfers(for: commandStatus, outstandingCount: transferCount)
+            } else {
+                print("NO TRANSFERS BUT WANT THEM")
             }
         }
         
@@ -117,7 +120,7 @@ class MainInterfaceController: WKInterfaceController, SessionCommands {
     @objc
     func dataDidFlow(_ notification: Notification) {
         guard let commandStatus = notification.object as? CommandStatus else { return }
-        
+        print("WHAT")
         // If the data is from current channel, simple update color and time stamp, then return.
         //
         if commandStatus.command == command {

@@ -20,14 +20,14 @@ class HACKMapViewController: MRMapViewController, SessionCommands {
     func sendDirections (currentStepIndex: Int) {
         if (mapView.route != nil) {
             // Do something here with sending data regarding the route to the phone
-            print("ROUTE ISN'T NULL")
+//            print("ROUTE ISN'T NULL")
             // We can loop through the route steps here
             
             let currentRoute = mapView.route
 
             if let steps = currentRoute?.steps {
                 let currentStep = steps[currentStepIndex]
-                print("In if \(currentStep.instructions)")
+//                print("In if \(currentStep.instructions)")
                 
                 // Let's send some data, or at least create a dictionary to send here
                 var dataToSend : [String:Any] = ["instructions":currentStep.instructions,
@@ -36,11 +36,11 @@ class HACKMapViewController: MRMapViewController, SessionCommands {
                                   "totalDistance":currentRoute?.distance
                     ]
                 
-                print("DIRECTIONS DICTIONARY")
-                for element in dataToSend {
-                    print(element.key)
-                    print(element.value)
-                }
+//                print("DIRECTIONS DICTIONARY")
+//                for element in dataToSend {
+//                    print(element.key)
+//                    print(element.value)
+//                }
                 
                 transferUserInfo(dataToSend)
             }

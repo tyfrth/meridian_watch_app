@@ -30,12 +30,14 @@ class SessionHandler: NSObject, WCSessionDelegate {
     // Called when WCSession activation state is changed.
     //
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("ACTIVATION CHANGED")
         postNotificationOnMainQueueAsync(name: .activationDidComplete)
     }
     
     // Called when WCSession reachability is changed.
     //
     func sessionReachabilityDidChange(_ session: WCSession) {
+        print("REACHABILITY CHANGED - \(session.isReachable)")
         postNotificationOnMainQueueAsync(name: .reachabilityDidChange)
     }
     
@@ -52,6 +54,7 @@ class SessionHandler: NSObject, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
         var commandStatus = CommandStatus(command: .sendMessage, phrase: .received)
         commandStatus.timedColor = TimedColor(message)
+        print("MSG  RECEIVED")
         postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
     
@@ -59,6 +62,7 @@ class SessionHandler: NSObject, WCSessionDelegate {
     //
     func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
         self.session(session, didReceiveMessage: message)
+        print("MESSAGE RECEIVED")
         replyHandler(message) // Echo back the time stamp.
     }
     
@@ -67,7 +71,7 @@ class SessionHandler: NSObject, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
         var commandStatus = CommandStatus(command: .transferUserInfo, phrase: .received)
         commandStatus.timedColor = TimedColor(userInfo)
-                
+        print("USER INFO RECEIVED")
         postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
     
@@ -76,8 +80,9 @@ class SessionHandler: NSObject, WCSessionDelegate {
     func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
         var commandStatus = CommandStatus(command: .transferUserInfo, phrase: .finished)
         commandStatus.message = userInfoTransfer.userInfo
-
+        print("USER INFO TRANSFER DONE - \(String(describing: commandStatus.message))")
         if let error = error {
+            print("USER INFO TRANSFER ERROR")
             commandStatus.errorMessage = error.localizedDescription
         }
         postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
@@ -87,7 +92,7 @@ class SessionHandler: NSObject, WCSessionDelegate {
     //
     #if os(iOS)
     func sessionDidBecomeInactive(_ session: WCSession) {
-        print("\(#function): activationState = \(session.activationState.rawValue)")
+        print("\(#function): activationState = INACTIVE")
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
