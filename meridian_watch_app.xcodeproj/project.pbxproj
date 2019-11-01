@@ -17,6 +17,12 @@
 		2145E181236B73CF00B4625D /* meridian_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2145E180236B73CF00B4625D /* meridian_image.png */; };
 		2145E204236B8F8400B4625D /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E1FC236B8F8300B4625D /* UserStatus.swift */; };
 		2145E205236B8F8400B4625D /* DatedRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E1FD236B8F8300B4625D /* DatedRecord.swift */; };
+		2145E20B236B9F5200B4625D /* LeftArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2145E20A236B9F5200B4625D /* LeftArrow.png */; };
+		2145E20F236BA79800B4625D /* tiny_right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2145E20E236BA79800B4625D /* tiny_right_arrow.png */; };
+		2145E2B6236C945D00B4625D /* HACKDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E2B5236C945D00B4625D /* HACKDirections.swift */; };
+		2145E2B8236C946600B4625D /* HACKMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E2B7236C946600B4625D /* HACKMapViewController.swift */; };
+		2145E2BA236C955100B4625D /* HACKDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E2B5236C945D00B4625D /* HACKDirections.swift */; };
+		2145E2BB236C9C8100B4625D /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C26A08236B6E2D002C7BD5 /* SessionHandler.swift */; };
 		BA951FB9236B514800D543D3 /* HACKHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA951FB8236B514800D543D3 /* HACKHost.swift */; };
 		D2C269C2236A1B7C002C7BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269C1236A1B7C002C7BD5 /* AppDelegate.swift */; };
 		D2C269C4236A1B7C002C7BD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269C3236A1B7C002C7BD5 /* SceneDelegate.swift */; };
@@ -119,6 +125,10 @@
 		2145E180236B73CF00B4625D /* meridian_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meridian_image.png; sourceTree = "<group>"; };
 		2145E1FC236B8F8300B4625D /* UserStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 		2145E1FD236B8F8300B4625D /* DatedRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatedRecord.swift; sourceTree = "<group>"; };
+		2145E20A236B9F5200B4625D /* LeftArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeftArrow.png; sourceTree = "<group>"; };
+		2145E20E236BA79800B4625D /* tiny_right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiny_right_arrow.png; sourceTree = "<group>"; };
+		2145E2B5236C945D00B4625D /* HACKDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HACKDirections.swift; sourceTree = "<group>"; };
+		2145E2B7236C946600B4625D /* HACKMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HACKMapViewController.swift; sourceTree = "<group>"; };
 		2441B0A0870EA88C5128FF4F /* Pods-meridian_watch_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meridian_watch_app.release.xcconfig"; path = "Target Support Files/Pods-meridian_watch_app/Pods-meridian_watch_app.release.xcconfig"; sourceTree = "<group>"; };
 		2B1E55717DCD42A483D5054A /* Pods_meridian_watch_app_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meridian_watch_app_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		673D444660C779B78CFEE6AE /* Pods_meridian_watch_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meridian_watch_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +214,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2145E2B9236C952C00B4625D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D2C26A08236B6E2D002C7BD5 /* SessionHandler.swift */,
+				BA951FB8236B514800D543D3 /* HACKHost.swift */,
+				2145E2B5236C945D00B4625D /* HACKDirections.swift */,
+				BA951FB7236B486D00D543D3 /* HACKBridge.h */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		3F84F0272A833994C4914DDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +238,7 @@
 		D2C269B5236A1B7C002C7BD5 = {
 			isa = PBXGroup;
 			children = (
-				BA951FB7236B486D00D543D3 /* HACKBridge.h */,
+				2145E2B9236C952C00B4625D /* Shared */,
 				D2C269C0236A1B7C002C7BD5 /* meridian_watch_app */,
 				D2C269D6236A1B7E002C7BD5 /* meridian_watch_app WatchKit App */,
 				D2C269E5236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension */,
@@ -240,15 +261,14 @@
 		D2C269C0236A1B7C002C7BD5 /* meridian_watch_app */ = {
 			isa = PBXGroup;
 			children = (
+				2145E2B7236C946600B4625D /* HACKMapViewController.swift */,
 				D2C269C1236A1B7C002C7BD5 /* AppDelegate.swift */,
 				D2C269C3236A1B7C002C7BD5 /* SceneDelegate.swift */,
 				D2C269C5236A1B7C002C7BD5 /* ContentView.swift */,
-				D2C26A08236B6E2D002C7BD5 /* SessionHandler.swift */,
 				D2C269C7236A1B7E002C7BD5 /* Assets.xcassets */,
 				D2C269CC236A1B7E002C7BD5 /* LaunchScreen.storyboard */,
 				D2C269CF236A1B7E002C7BD5 /* Info.plist */,
 				D2C269C9236A1B7E002C7BD5 /* Preview Content */,
-				BA951FB8236B514800D543D3 /* HACKHost.swift */,
 			);
 			path = meridian_watch_app;
 			sourceTree = "<group>";
@@ -274,6 +294,8 @@
 		D2C269E5236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2145E20E236BA79800B4625D /* tiny_right_arrow.png */,
+				2145E20A236B9F5200B4625D /* LeftArrow.png */,
 				2145E1FB236B8F8300B4625D /* Model */,
 				2145E180236B73CF00B4625D /* meridian_image.png */,
 				2145E17D236B6A8200B4625D /* ComplicationController.swift */,
@@ -428,8 +450,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2145E20B236B9F5200B4625D /* LeftArrow.png in Resources */,
 				2145E181236B73CF00B4625D /* meridian_image.png in Resources */,
 				D2C269F4236A1B80002C7BD5 /* Preview Assets.xcassets in Resources */,
+				2145E20F236BA79800B4625D /* tiny_right_arrow.png in Resources */,
 				D2C269F1236A1B80002C7BD5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,7 +551,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2145E2B8236C946600B4625D /* HACKMapViewController.swift in Sources */,
 				D2C269C2236A1B7C002C7BD5 /* AppDelegate.swift in Sources */,
+				2145E2B6236C945D00B4625D /* HACKDirections.swift in Sources */,
 				D2C26A09236B6E2D002C7BD5 /* SessionHandler.swift in Sources */,
 				D2C269C4236A1B7C002C7BD5 /* SceneDelegate.swift in Sources */,
 				BA951FB9236B514800D543D3 /* HACKHost.swift in Sources */,
@@ -547,6 +573,8 @@
 				2145E17F236B6A8300B4625D /* ComplicationController.swift in Sources */,
 				D2C269EF236A1B7F002C7BD5 /* NotificationView.swift in Sources */,
 				2145E205236B8F8400B4625D /* DatedRecord.swift in Sources */,
+				2145E2BA236C955100B4625D /* HACKDirections.swift in Sources */,
+				2145E2BB236C9C8100B4625D /* SessionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,10 +843,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				NEW_SETT = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "sabotoothtigers.meridian-watch-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = HACKBridge.h;
+				SWIFT_OBJC_BRIDGING_HEADER = Shared/HACKBridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -839,10 +866,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				NEW_SETT = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "sabotoothtigers.meridian-watch-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = HACKBridge.h;
+				SWIFT_OBJC_BRIDGING_HEADER = Shared/HACKBridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

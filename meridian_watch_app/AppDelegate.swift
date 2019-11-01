@@ -13,26 +13,28 @@ import WatchConnectivity
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    private lazy var sessionHandler: SessionHandler = {
+        return SessionHandler()
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let config = MRConfig()
         
         // If samples are to be run via US servers, use these values
-       config.applicationToken = "090c29d8b4cc628e4bd327abf37f62e4e3477bae"
-       config.domainConfig.domainRegion = MRDomainRegion.default
+        config.applicationToken = "090c29d8b4cc628e4bd327abf37f62e4e3477bae"
+        config.domainConfig.domainRegion = MRDomainRegion.default
 
-       // If samples are to be run via EU servers, use these values
-       // config.applicationToken = "50b4558f8fbfd96e26e122785e61b1589e1a13a5"
-       // config.domainConfig.domainRegion = MRDomainRegion.EU;
+        // If samples are to be run via EU servers, use these values
+        // config.applicationToken = "50b4558f8fbfd96e26e122785e61b1589e1a13a5"
+        // config.domainConfig.domainRegion = MRDomainRegion.EU;
 
-       // must be called once, in application:didFinishLaunching
-       Meridian.configure(config)
+        // must be called once, in application:didFinishLaunching
+        Meridian.configure(config)
         
-        //check to see if session compatible
-        if !SessionHandler.shared.isSupported() {
-            print("WCSession not supported, dawg")
-        }
+        assert(WCSession.isSupported(), "Requires Watch Connectivity support!")
+        WCSession.default.delegate = sessionHandler
+        WCSession.default.activate()
         
         return true
     }

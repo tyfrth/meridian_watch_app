@@ -9,7 +9,7 @@ let datesKey = "meridian.dates"
 class UserStatus: ObservableObject {
     enum Status {
         case idle
-        case countingDown
+        case directing
     }
 
     enum Page {

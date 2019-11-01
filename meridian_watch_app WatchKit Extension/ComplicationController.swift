@@ -11,27 +11,35 @@ import ClockKit
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
     // MARK: - Timeline Configuration
+    let timeLineText = ["➡ 300 ft", "⬅ 50 ft", "➡ 100 ft", "🔚 120 ft"]
     
     func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
         handler([.forward])
     }
     
     func getTimelineStartDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
-        switch userStatus.status {
-        case .idle:
-            handler(nil)
-        case .countingDown:
-            handler(userStatus.end.addingTimeInterval(-limit))
-        }
+        
+        let currentDate = Date()
+        handler(currentDate)
+        
+//        switch userStatus.status {
+//        case .idle:
+//            handler(nil)
+//        case .countingDown:
+//            handler(userStatus.end.addingTimeInterval(-limit))
+//        }
     }
     
     func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
-        switch userStatus.status {
-        case .idle:
-            handler(nil)
-        case .countingDown:
-            handler(userStatus.end)
-        }
+        
+        let currentDate = Date()
+        handler(currentDate.addingTimeInterval(60*60))
+//        switch userStatus.status {
+//        case .idle:
+//            handler(nil)
+//        case .countingDown:
+//            handler(userStatus.end)
+//        }
     }
     
     func getPrivacyBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationPrivacyBehavior) -> Void) {
@@ -43,7 +51,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         // Call the handler with the current timeline entry
 
-        if userStatus.status == .countingDown,
+        if userStatus.status == .directing,
             let template = self.currentTemplate(family: complication.family) {
             let entry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
             handler(entry)
@@ -58,7 +66,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
         var entries: [CLKComplicationTimelineEntry] = []
 
-        if userStatus.status == .countingDown {
+        if userStatus.status == .directing {
             if let template = self.placeholderTemplate(family: complication.family) {
                 let endEntry = CLKComplicationTimelineEntry(date: userStatus.end, complicationTemplate: template)
                 entries.append(endEntry)
@@ -95,7 +103,11 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
     func placeholderTemplate(family: CLKComplicationFamily) -> CLKComplicationTemplate? {
         let meridianImage = UIImage(named: "meridian_image")
-        let appNameTextProvider = CLKSimpleTextProvider(text: NSLocalizedString("Meridian", comment: "Meridian"))
+        let rightArrow = UIImage(named: "tiny_right_arrow")
+        let leftArrow = UIImage(named: "LeftArrow")
+        
+        let appNameTextProvider = CLKSimpleTextProvider(text: NSLocalizedString(" Meridian", comment: "Meridian"))
+        let rightArrowProvier = CLKFullColorImageProvider(fullColorImage: rightArrow!)
         let simpleTextProvider = CLKSimpleTextProvider(text: "Meridian")
         let imageProvider = CLKImageProvider(onePieceImage: meridianImage!)
         let fullColor = CLKFullColorImageProvider(fullColorImage: meridianImage!)
@@ -169,9 +181,12 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
         case .graphicRectangular:
             let template = CLKComplicationTemplateGraphicRectangularTextGauge()
+//            template.headerImageProvider = rightArrowProvier
             template.headerTextProvider = appNameTextProvider
-            template.body1TextProvider = CLKRelativeDateTextProvider(date: userStatus.end, style: .naturalFull, units: [.minute, .second])
+            template.body1TextProvider = CLKSimpleTextProvider(text: "➡ 300ft")
+                //CLKRelativeDateTextProvider(date: userStatus.end, style: .naturalFull, units: [.minute, .second])
             template.gaugeProvider = gaugeProvider
+            template.tintColor = UIColor.blue
             return template
 
         @unknown default:
@@ -261,8 +276,10 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         case .graphicRectangular:
             let template = CLKComplicationTemplateGraphicRectangularTextGauge()
             template.headerTextProvider = appNameTextProvider
-            template.body1TextProvider = CLKRelativeDateTextProvider(date: userStatus.end, style: .naturalFull, units: [.minute, .second])
+            template.body1TextProvider = CLKSimpleTextProvider(text: "300ft")
+                //CLKRelativeDateTextProvider(date: userStatus.end, style: .naturalFull, units: [.minute, .second])
             template.gaugeProvider = gaugeProvider
+            template.tintColor = UIColor.blue
             return template
 
         @unknown default:

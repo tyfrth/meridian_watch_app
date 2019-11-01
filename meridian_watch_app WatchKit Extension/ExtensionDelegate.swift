@@ -7,10 +7,72 @@
 //
 
 import WatchKit
+import WatchConnectivity
 
 let userStatus = UserStatus()
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
+    
+    private lazy var sessionHandler: SessionHandler = {
+        return SessionHandler()
+    }()
+    
+    private var activationStateObservation: NSKeyValueObservation?
+    private var hasContentPendingObservation: NSKeyValueObservation?
+
+    private var wcBackgroundTasks = [WKWatchConnectivityRefreshBackgroundTask]()
+    
+    override init() {
+        super.init()
+        assert(WCSession.isSupported(), "Requires a platform supporting Watch Connectivity!")
+        
+        // WKWatchConnectivityRefreshBackgroundTask should be completed – Otherwise they will keep consuming
+        // the background executing time and eventually causes an app crash.
+        // The timing to complete the tasks is when the current WCSession turns to not .activated or
+        // hasContentPending flipped to false (see completeBackgroundTasks), so KVO is set up here to observe
+        // the changes if the two properties.
+        //
+        activationStateObservation = WCSession.default.observe(\.activationState) { _, _ in
+            DispatchQueue.main.async {
+                self.completeBackgroundTasks()
+            }
+        }
+        hasContentPendingObservation = WCSession.default.observe(\.hasContentPending) { _, _ in
+            DispatchQueue.main.async {
+                self.completeBackgroundTasks()
+            }
+        }
+
+        // Activate the session asynchronously as early as possible.
+        // In the case of being background launched with a task, this may save some background runtime budget.
+        //
+        WCSession.default.delegate = sessionHandler
+        WCSession.default.activate()
+    }
+    
+    // Compelete the background tasks, and schedule a snapshot refresh.
+    //
+    func completeBackgroundTasks() {
+        guard !wcBackgroundTasks.isEmpty else { return }
+
+        guard WCSession.default.activationState == .activated,
+            WCSession.default.hasContentPending == false else { return }
+        
+        wcBackgroundTasks.forEach { $0.setTaskCompletedWithSnapshot(false) }
+        
+        print("\(#function):\(wcBackgroundTasks) was completed!")
+
+        // Schedule a snapshot refresh if the UI is updated by background tasks.
+        //
+        let date = Date(timeIntervalSinceNow: 1)
+        WKExtension.shared().scheduleSnapshotRefresh(withPreferredDate: date, userInfo: nil) { error in
+            
+            if let error = error {
+                print("scheduleSnapshotRefresh error: \(error)!")
+            }
+        }
+        wcBackgroundTasks.removeAll()
+    }
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
@@ -30,6 +92,9 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
         for task in backgroundTasks {
             // Use a switch statement to check the task type
             switch task {
+            case let wcTask as WKWatchConnectivityRefreshBackgroundTask:
+                wcBackgroundTasks.append(wcTask)
+                print("\(#function):\(wcTask.description) was appended!")
             case let backgroundTask as WKApplicationRefreshBackgroundTask:
                 // Be sure to complete the background task once you’re done.
                 backgroundTask.setTaskCompletedWithSnapshot(false)
