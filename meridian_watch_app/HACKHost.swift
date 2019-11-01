@@ -24,7 +24,7 @@ let MAP_ID_SHELL = "5722646637445120"
 let APP_ID_EU = "4856321132199936"
 let MAP_ID_EU = "5752754626625536"
 
-class MSExampleHost: NSObject {
+class HACKHost: NSObject {
     @objc dynamic class func appID() -> String {
         if Meridian.sharedConfig()?.domainConfig.domainRegion == MRDomainRegion.EU {
             return APP_ID_US

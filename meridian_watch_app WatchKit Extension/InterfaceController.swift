@@ -1,22 +1,17 @@
 //
-//  HostingController.swift
+//  InterfaceController.swift
 //  meridian_watch_app WatchKit Extension
 //
-//  Created by Tyler Frith on 10/30/19.
+//  Created by Paige Mckinney on 11/1/19.
 //  Copyright © 2019 sabotoothtigers. All rights reserved.
 //
 
 import WatchKit
 import Foundation
-import SwiftUI
 import WatchConnectivity
 
-class HostingController: WKHostingController<ContentView>, WCSessionDelegate {
-    override var body: ContentView {
-        return ContentView()
-    }
-    
-//    // Create our session property
+class InterfaceController: WKInterfaceController, WCSessionDelegate {
+    //    // Create our session property
     private var session = WCSession.default
     
     override func awake(withContext context: Any?) {
@@ -61,5 +56,5 @@ class HostingController: WKHostingController<ContentView>, WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         print("activationDidCompleteWith activationState:\(activationState) error:\(String(describing: error))")
     }
-
+    
 }
