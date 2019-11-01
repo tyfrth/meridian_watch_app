@@ -15,14 +15,19 @@
 		2145E17B236B64AD00B4625D /* Pods_meridian_watch_app_WatchKit_Extension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1E55717DCD42A483D5054A /* Pods_meridian_watch_app_WatchKit_Extension.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2145E17F236B6A8300B4625D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E17D236B6A8200B4625D /* ComplicationController.swift */; };
 		2145E181236B73CF00B4625D /* meridian_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2145E180236B73CF00B4625D /* meridian_image.png */; };
-		2145E204236B8F8400B4625D /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E1FC236B8F8300B4625D /* UserStatus.swift */; };
-		2145E205236B8F8400B4625D /* DatedRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E1FD236B8F8300B4625D /* DatedRecord.swift */; };
 		2145E20B236B9F5200B4625D /* LeftArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2145E20A236B9F5200B4625D /* LeftArrow.png */; };
 		2145E20F236BA79800B4625D /* tiny_right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2145E20E236BA79800B4625D /* tiny_right_arrow.png */; };
 		2145E2B6236C945D00B4625D /* HACKDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E2B5236C945D00B4625D /* HACKDirections.swift */; };
 		2145E2B8236C946600B4625D /* HACKMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E2B7236C946600B4625D /* HACKMapViewController.swift */; };
 		2145E2BA236C955100B4625D /* HACKDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E2B5236C945D00B4625D /* HACKDirections.swift */; };
 		2145E2BB236C9C8100B4625D /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C26A08236B6E2D002C7BD5 /* SessionHandler.swift */; };
+		2145E2BD236CA50B00B4625D /* SessionCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E2BC236CA50B00B4625D /* SessionCommands.swift */; };
+		2145E2BF236CA61B00B4625D /* CommandStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E2BE236CA61B00B4625D /* CommandStatus.swift */; };
+		2145E2C0236CA73F00B4625D /* SessionCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E2BC236CA50B00B4625D /* SessionCommands.swift */; };
+		2145E2C1236CA74200B4625D /* CommandStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E2BE236CA61B00B4625D /* CommandStatus.swift */; };
+		2145E2C3236CA98200B4625D /* UserInfoTransfersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E2C2236CA98200B4625D /* UserInfoTransfersController.swift */; };
+		2145E2C5236CA9BB00B4625D /* SessionTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145E2C4236CA9BB00B4625D /* SessionTransfer.swift */; };
+		2145E2C7236CAA0E00B4625D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2145E2C6236CAA0E00B4625D /* Interface.storyboard */; };
 		BA951FB9236B514800D543D3 /* HACKHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA951FB8236B514800D543D3 /* HACKHost.swift */; };
 		D2C269C2236A1B7C002C7BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269C1236A1B7C002C7BD5 /* AppDelegate.swift */; };
 		D2C269C4236A1B7C002C7BD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269C3236A1B7C002C7BD5 /* SceneDelegate.swift */; };
@@ -31,11 +36,9 @@
 		D2C269CB236A1B7E002C7BD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C269CA236A1B7E002C7BD5 /* Preview Assets.xcassets */; };
 		D2C269CE236A1B7E002C7BD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C269CC236A1B7E002C7BD5 /* LaunchScreen.storyboard */; };
 		D2C269D3236A1B7E002C7BD5 /* meridian_watch_app WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D2C269D2236A1B7E002C7BD5 /* meridian_watch_app WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D2C269D9236A1B7E002C7BD5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C269D7236A1B7E002C7BD5 /* Interface.storyboard */; };
 		D2C269DB236A1B7F002C7BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C269DA236A1B7F002C7BD5 /* Assets.xcassets */; };
 		D2C269E2236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D2C269E1236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D2C269E7236A1B7F002C7BD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269E6236A1B7F002C7BD5 /* ContentView.swift */; };
-		D2C269E9236A1B7F002C7BD5 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269E8236A1B7F002C7BD5 /* HostingController.swift */; };
+		D2C269E9236A1B7F002C7BD5 /* MainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269E8236A1B7F002C7BD5 /* MainInterfaceController.swift */; };
 		D2C269EB236A1B7F002C7BD5 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269EA236A1B7F002C7BD5 /* ExtensionDelegate.swift */; };
 		D2C269ED236A1B7F002C7BD5 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269EC236A1B7F002C7BD5 /* NotificationController.swift */; };
 		D2C269EF236A1B7F002C7BD5 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C269EE236A1B7F002C7BD5 /* NotificationView.swift */; };
@@ -123,12 +126,15 @@
 		063FBC05B8ACE897402E38C3 /* Pods-meridian_watch_app WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meridian_watch_app WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-meridian_watch_app WatchKit App/Pods-meridian_watch_app WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		2145E17D236B6A8200B4625D /* ComplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		2145E180236B73CF00B4625D /* meridian_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meridian_image.png; sourceTree = "<group>"; };
-		2145E1FC236B8F8300B4625D /* UserStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
-		2145E1FD236B8F8300B4625D /* DatedRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatedRecord.swift; sourceTree = "<group>"; };
 		2145E20A236B9F5200B4625D /* LeftArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeftArrow.png; sourceTree = "<group>"; };
 		2145E20E236BA79800B4625D /* tiny_right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiny_right_arrow.png; sourceTree = "<group>"; };
 		2145E2B5236C945D00B4625D /* HACKDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HACKDirections.swift; sourceTree = "<group>"; };
 		2145E2B7236C946600B4625D /* HACKMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HACKMapViewController.swift; sourceTree = "<group>"; };
+		2145E2BC236CA50B00B4625D /* SessionCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCommands.swift; sourceTree = "<group>"; };
+		2145E2BE236CA61B00B4625D /* CommandStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandStatus.swift; sourceTree = "<group>"; };
+		2145E2C2236CA98200B4625D /* UserInfoTransfersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTransfersController.swift; sourceTree = "<group>"; };
+		2145E2C4236CA9BB00B4625D /* SessionTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTransfer.swift; sourceTree = "<group>"; };
+		2145E2C6236CAA0E00B4625D /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		2441B0A0870EA88C5128FF4F /* Pods-meridian_watch_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meridian_watch_app.release.xcconfig"; path = "Target Support Files/Pods-meridian_watch_app/Pods-meridian_watch_app.release.xcconfig"; sourceTree = "<group>"; };
 		2B1E55717DCD42A483D5054A /* Pods_meridian_watch_app_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meridian_watch_app_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		673D444660C779B78CFEE6AE /* Pods_meridian_watch_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meridian_watch_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,12 +152,10 @@
 		D2C269CD236A1B7E002C7BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2C269CF236A1B7E002C7BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2C269D2236A1B7E002C7BD5 /* meridian_watch_app WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "meridian_watch_app WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2C269D8236A1B7E002C7BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		D2C269DA236A1B7F002C7BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2C269DC236A1B7F002C7BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2C269E1236A1B7F002C7BD5 /* meridian_watch_app WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "meridian_watch_app WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2C269E6236A1B7F002C7BD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D2C269E8236A1B7F002C7BD5 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		D2C269E8236A1B7F002C7BD5 /* MainInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceController.swift; sourceTree = "<group>"; };
 		D2C269EA236A1B7F002C7BD5 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		D2C269EC236A1B7F002C7BD5 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D2C269EE236A1B7F002C7BD5 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
@@ -205,15 +209,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		2145E1FB236B8F8300B4625D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2145E1FC236B8F8300B4625D /* UserStatus.swift */,
-				2145E1FD236B8F8300B4625D /* DatedRecord.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		2145E2B9236C952C00B4625D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +216,9 @@
 				BA951FB8236B514800D543D3 /* HACKHost.swift */,
 				2145E2B5236C945D00B4625D /* HACKDirections.swift */,
 				BA951FB7236B486D00D543D3 /* HACKBridge.h */,
+				2145E2BC236CA50B00B4625D /* SessionCommands.swift */,
+				2145E2BE236CA61B00B4625D /* CommandStatus.swift */,
+				2145E2C4236CA9BB00B4625D /* SessionTransfer.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -284,7 +282,7 @@
 		D2C269D6236A1B7E002C7BD5 /* meridian_watch_app WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				D2C269D7236A1B7E002C7BD5 /* Interface.storyboard */,
+				2145E2C6236CAA0E00B4625D /* Interface.storyboard */,
 				D2C269DA236A1B7F002C7BD5 /* Assets.xcassets */,
 				D2C269DC236A1B7F002C7BD5 /* Info.plist */,
 			);
@@ -296,11 +294,9 @@
 			children = (
 				2145E20E236BA79800B4625D /* tiny_right_arrow.png */,
 				2145E20A236B9F5200B4625D /* LeftArrow.png */,
-				2145E1FB236B8F8300B4625D /* Model */,
 				2145E180236B73CF00B4625D /* meridian_image.png */,
 				2145E17D236B6A8200B4625D /* ComplicationController.swift */,
-				D2C269E6236A1B7F002C7BD5 /* ContentView.swift */,
-				D2C269E8236A1B7F002C7BD5 /* HostingController.swift */,
+				D2C269E8236A1B7F002C7BD5 /* MainInterfaceController.swift */,
 				D2C269EA236A1B7F002C7BD5 /* ExtensionDelegate.swift */,
 				D2C269EC236A1B7F002C7BD5 /* NotificationController.swift */,
 				D2C269EE236A1B7F002C7BD5 /* NotificationView.swift */,
@@ -308,6 +304,7 @@
 				D2C269F5236A1B80002C7BD5 /* Info.plist */,
 				D2C269F6236A1B80002C7BD5 /* PushNotificationPayload.apns */,
 				D2C269F2236A1B80002C7BD5 /* Preview Content */,
+				2145E2C2236CA98200B4625D /* UserInfoTransfersController.swift */,
 			);
 			path = "meridian_watch_app WatchKit Extension";
 			sourceTree = "<group>";
@@ -441,8 +438,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2145E2C7236CAA0E00B4625D /* Interface.storyboard in Resources */,
 				D2C269DB236A1B7F002C7BD5 /* Assets.xcassets in Resources */,
-				D2C269D9236A1B7E002C7BD5 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,11 +549,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2145E2B8236C946600B4625D /* HACKMapViewController.swift in Sources */,
+				2145E2BF236CA61B00B4625D /* CommandStatus.swift in Sources */,
 				D2C269C2236A1B7C002C7BD5 /* AppDelegate.swift in Sources */,
 				2145E2B6236C945D00B4625D /* HACKDirections.swift in Sources */,
 				D2C26A09236B6E2D002C7BD5 /* SessionHandler.swift in Sources */,
 				D2C269C4236A1B7C002C7BD5 /* SceneDelegate.swift in Sources */,
 				BA951FB9236B514800D543D3 /* HACKHost.swift in Sources */,
+				2145E2BD236CA50B00B4625D /* SessionCommands.swift in Sources */,
 				D2C269C6236A1B7C002C7BD5 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,15 +564,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2C269E9236A1B7F002C7BD5 /* HostingController.swift in Sources */,
-				D2C269E7236A1B7F002C7BD5 /* ContentView.swift in Sources */,
+				D2C269E9236A1B7F002C7BD5 /* MainInterfaceController.swift in Sources */,
+				2145E2C1236CA74200B4625D /* CommandStatus.swift in Sources */,
 				D2C269ED236A1B7F002C7BD5 /* NotificationController.swift in Sources */,
-				2145E204236B8F8400B4625D /* UserStatus.swift in Sources */,
 				D2C269EB236A1B7F002C7BD5 /* ExtensionDelegate.swift in Sources */,
+				2145E2C0236CA73F00B4625D /* SessionCommands.swift in Sources */,
 				2145E17F236B6A8300B4625D /* ComplicationController.swift in Sources */,
 				D2C269EF236A1B7F002C7BD5 /* NotificationView.swift in Sources */,
-				2145E205236B8F8400B4625D /* DatedRecord.swift in Sources */,
+				2145E2C3236CA98200B4625D /* UserInfoTransfersController.swift in Sources */,
 				2145E2BA236C955100B4625D /* HACKDirections.swift in Sources */,
+				2145E2C5236CA9BB00B4625D /* SessionTransfer.swift in Sources */,
 				2145E2BB236C9C8100B4625D /* SessionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,14 +600,6 @@
 				D2C269CD236A1B7E002C7BD5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		D2C269D7236A1B7E002C7BD5 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D2C269D8236A1B7E002C7BD5 /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

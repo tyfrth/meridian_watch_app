@@ -1,10 +1,9 @@
-//
-//  SessionHandler.swift
-//  meridian_watch_app
-//
-//  Created by Tyler Frith on 10/31/19.
-//  Copyright © 2019 sabotoothtigers. All rights reserved.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+SessionDelegater implemments the WCSessionDelegate methods. Used on both iOS and watchOS.
+*/
 
 import Foundation
 import WatchConnectivity
@@ -13,12 +12,19 @@ import WatchConnectivity
 import ClockKit
 #endif
 
+// Custom notifications.
+// Posted when Watch Connectivity activation or reachibility status is changed,
+// or when data is received or sent. Clients observe these notifications to update the UI.
+//
 extension Notification.Name {
     static let dataDidFlow = Notification.Name("DataDidFlow")
     static let activationDidComplete = Notification.Name("ActivationDidComplete")
     static let reachabilityDidChange = Notification.Name("ReachabilityDidChange")
 }
 
+// Implement WCSessionDelegate methods to receive Watch Connectivity data and notify clients.
+// WCsession status changes are also handled here.
+//
 class SessionHandler: NSObject, WCSessionDelegate {
     
     // Called when WCSession activation state is changed.
@@ -36,13 +42,17 @@ class SessionHandler: NSObject, WCSessionDelegate {
     // Called when an app context is received.
     //
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
-        postNotificationOnMainQueueAsync(name: .dataDidFlow, object: "Received")
+        var commandStatus = CommandStatus(command: .updateAppContext, phrase: .received)
+        commandStatus.timedColor = TimedColor(applicationContext)
+        postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
     
     // Called when a message is received and the peer doesn't need a response.
     //
     func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
-        postNotificationOnMainQueueAsync(name: .dataDidFlow, object: "Received")
+        var commandStatus = CommandStatus(command: .sendMessage, phrase: .received)
+        commandStatus.timedColor = TimedColor(message)
+        postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
     
     // Called when a message is received and the peer needs a response.
@@ -52,29 +62,25 @@ class SessionHandler: NSObject, WCSessionDelegate {
         replyHandler(message) // Echo back the time stamp.
     }
     
-    // Called when a piece of message data is received and the peer doesn't need a response.
+    // Called when a userInfo is received.
     //
-    func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
-        postNotificationOnMainQueueAsync(name: .dataDidFlow, object: "Received")
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
+        var commandStatus = CommandStatus(command: .transferUserInfo, phrase: .received)
+        commandStatus.timedColor = TimedColor(userInfo)
+                
+        postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
     
-    // Called when a piece of message data is received and the peer needs a response.
-    //
-    func session(_ session: WCSession, didReceiveMessageData messageData: Data, replyHandler: @escaping (Data) -> Void) {
-        self.session(session, didReceiveMessageData: messageData)
-        replyHandler(messageData) // Echo back the time stamp.
-    }
-    
-    // Called when a directions is received.
-    //
-    func session(_ session: WCSession, didReceiveDirections directions: [String: Any] = [:]) {
-        postNotificationOnMainQueueAsync(name: .dataDidFlow, object: "Received")
-    }
-    
-    // Called when sending drections is done.
+    // Called when sending a userInfo is done.
     //
     func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
-        postNotificationOnMainQueueAsync(name: .dataDidFlow, object: "Finished")
+        var commandStatus = CommandStatus(command: .transferUserInfo, phrase: .finished)
+        commandStatus.timedColor = TimedColor(userInfoTransfer.userInfo)        
+
+        if let error = error {
+            commandStatus.errorMessage = error.localizedDescription
+        }
+        postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
     
     // WCSessionDelegate methods for iOS only.
@@ -96,10 +102,9 @@ class SessionHandler: NSObject, WCSessionDelegate {
     
     // Post a notification on the main thread asynchronously.
     //
-    private func postNotificationOnMainQueueAsync(name: NSNotification.Name, object: String? = nil) {
+    private func postNotificationOnMainQueueAsync(name: NSNotification.Name, object: CommandStatus? = nil) {
         DispatchQueue.main.async {
             NotificationCenter.default.post(name: name, object: object)
         }
     }
-    
 }

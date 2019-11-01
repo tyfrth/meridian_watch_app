@@ -9,8 +9,6 @@
 import WatchKit
 import WatchConnectivity
 
-let userStatus = UserStatus()
-
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
     
     private lazy var sessionHandler: SessionHandler = {
