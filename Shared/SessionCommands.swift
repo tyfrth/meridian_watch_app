@@ -60,7 +60,7 @@ extension SessionCommands {
     //
     func transferUserInfo(_ userInfo: [String: Any]) {
         var commandStatus = CommandStatus(command: .transferUserInfo, phrase: .transferring)
-        commandStatus.timedColor = TimedColor(userInfo)
+        commandStatus.message = userInfo
 
         guard WCSession.default.activationState == .activated else {
             return handleSessionUnactivated(with: commandStatus)

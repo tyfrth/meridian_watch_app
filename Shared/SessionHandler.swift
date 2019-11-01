@@ -75,7 +75,7 @@ class SessionHandler: NSObject, WCSessionDelegate {
     //
     func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
         var commandStatus = CommandStatus(command: .transferUserInfo, phrase: .finished)
-        commandStatus.timedColor = TimedColor(userInfoTransfer.userInfo)        
+        commandStatus.message = userInfoTransfer.userInfo
 
         if let error = error {
             commandStatus.errorMessage = error.localizedDescription

@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14268" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15504" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14224"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
     </dependencies>
     <scenes>
         <!--MainInterfaceController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="MainInterfaceController" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="SimpleWatchConnectivity_WatchKit_Extension">
+                <controller identifier="MainInterfaceController" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="meridian_watch_app_WatchKit_App" customModuleProvider="target">
                     <items>
                         <button alignment="left" id="xiq-oY-ZAR">
                             <group key="contentGroup" width="1" height="108" alignment="left" id="oNu-Qr-7VR">
@@ -46,7 +44,7 @@
         <!--UserInfoTransfersController-->
         <scene sceneID="rsH-jg-EL5">
             <objects>
-                <controller identifier="UserInfoTransfersController" id="QDd-Zc-JYy" customClass="UserInfoTransfersController" customModule="SimpleWatchConnectivity_WatchKit_Extension">
+                <controller identifier="UserInfoTransfersController" id="QDd-Zc-JYy" customClass="UserInfoTransfersController" customModule="meridian_watch_app_WatchKit_App" customModuleProvider="target">
                     <items>
                         <table alignment="left" id="kbV-F2-lex">
                             <items>
@@ -82,57 +80,6 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="272" y="9.5"/>
-        </scene>
-        <!--FileTransfersController-->
-        <scene sceneID="uzR-KA-9N5">
-            <objects>
-                <controller identifier="FileTransfersController" id="dHn-6j-g7b" customClass="FileTransfersController" customModule="SimpleWatchConnectivity_WatchKit_Extension">
-                    <items>
-                        <table alignment="left" id="x3c-SL-jgy">
-                            <items>
-                                <tableRow identifier="FileTransferRowController" id="z0V-Ai-cCk" customClass="FileTransferRowController" customModule="SimpleWatchConnectivity_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="50" alignment="left" layout="vertical" spacing="0.0" id="g85-36-Wt0">
-                                        <items>
-                                            <group width="1" height="0.69999999999999996" alignment="left" id="2ST-9r-ivS">
-                                                <items>
-                                                    <label width="108" height="1" alignment="left" verticalAlignment="bottom" text="Label" numberOfLines="0" id="M8v-k6-alI">
-                                                        <fontDescription key="font" style="UICTFontTextStyleBody"/>
-                                                    </label>
-                                                    <label height="1" alignment="left" verticalAlignment="bottom" text="x" textAlignment="right" id="XyT-TW-v1R"/>
-                                                </items>
-                                            </group>
-                                            <group width="1" height="0.29999999999999999" alignment="left" id="PNI-Ez-8d8">
-                                                <items>
-                                                    <label width="1" height="1" alignment="left" alpha="0.80000000000000004" text="Label" id="Wwx-6Q-5UQ">
-                                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                                    </label>
-                                                </items>
-                                            </group>
-                                        </items>
-                                        <edgeInsets key="margins" left="0.0" right="0.0" top="4" bottom="6"/>
-                                    </group>
-                                    <connections>
-                                        <outlet property="progressLabel" destination="Wwx-6Q-5UQ" id="Ayc-tx-hOg"/>
-                                        <outlet property="titleLabel" destination="M8v-k6-alI" id="VWC-NY-jqd"/>
-                                    </connections>
-                                </tableRow>
-                                <tableRow identifier="DoneRowController" id="qKS-xU-GCx" customClass="DoneRowController" customModule="SimpleWatchConnectivity_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="97" alignment="left" id="Ifb-NJ-Z2o">
-                                        <items>
-                                            <label width="1" height="1" alignment="left" text="No outstanding transfer now" textAlignment="center" numberOfLines="0" id="ylZ-CL-Ile"/>
-                                        </items>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </group>
-                                </tableRow>
-                            </items>
-                        </table>
-                    </items>
-                    <connections>
-                        <outlet property="table" destination="x3c-SL-jgy" id="zCr-qK-x0e"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="530" y="10"/>
         </scene>
     </scenes>
 </document>

@@ -76,6 +76,7 @@ struct CommandStatus {
     var command: Command
     var phrase: Phrase
     var timedColor: TimedColor?
+    var message: [String: Any]?
     var userInfoTranser: WCSessionUserInfoTransfer?
     var errorMessage: String?
     
